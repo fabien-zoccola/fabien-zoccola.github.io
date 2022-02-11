@@ -1,8 +1,8 @@
 <template>
-  <nu-theme hue="274" saturation="65" mod="tone strong"></nu-theme>
+  <nu-theme hue="200" saturation="65" mod="tone strong"></nu-theme>
   <nu-theme
     name="secondary"
-    hue="200"
+    hue="274"
     saturation="65"
     mod="tone strong"
   ></nu-theme>
@@ -28,6 +28,5 @@
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
 }
 </style>

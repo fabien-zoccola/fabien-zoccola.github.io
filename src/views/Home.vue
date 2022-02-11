@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <LandingProfile />
-  </div>
+  <LandingProfile />
 </template>
 
 <script>

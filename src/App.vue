@@ -1,8 +1,25 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nu-theme hue="274" saturation="65" mod="tone strong"></nu-theme>
+  <nu-theme
+    name="secondary"
+    hue="200"
+    saturation="65"
+    mod="tone strong"
+  ></nu-theme>
+  <nu-props
+    bg-color="#secondary-bg"
+    text-color="#secondary-text"
+    text-soft-color="#secondary-text-soft"
+    text-strong-color="#secondary-text-strong"
+    subtle-color="#secondary-subtle"
+    shadow-color="#secondary-shadow"
+    border-color="#secondary-border"
+    special-shadow-color="#secondary-special-shadow"
+  ></nu-props>
+  <!--  <div id="nav">-->
+  <!--    <router-link to="/">Home</router-link> |-->
+  <!--    <router-link to="/about">About</router-link>-->
+  <!--  </div>-->
   <router-view />
 </template>
 
@@ -11,22 +28,6 @@
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

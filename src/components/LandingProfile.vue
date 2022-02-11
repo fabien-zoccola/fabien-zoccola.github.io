@@ -1,5 +1,5 @@
 <template>
-  <nu-flex height="80vh">
+  <nu-flex height="80vh" class="landing">
     <nu-theme hue="186" saturation="65" mod="tone strong"></nu-theme>
     <nu-attrs
       for="flex"
@@ -7,10 +7,17 @@
     ></nu-attrs>
 
     <nu-flex width="60vw">
-      <nu-block>
-        <nu-h1 size="hero">Fabien Zoccola</nu-h1>
-      </nu-block>
+      <nu-flow size="lg" gap="0.5x">
+        <nu-h1 size="hero" theme="secondary" font="Montserrat">
+          Fabien Zoccola
+        </nu-h1>
+
+        <nu-block align="right" font="Montserrat">
+          Passionné d'informatique
+        </nu-block>
+      </nu-flow>
     </nu-flex>
+
     <nu-flex width="40vw">
       <nu-img
         :src="profilepicture"
@@ -37,4 +44,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.landing {
+  background-image: url("~@/assets/landing-banner.jpg");
+}
+</style>

@@ -1,24 +1,5 @@
 # portfolio
 
-## Project setup
-```
-npm install
-```
+## Credits
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* background banner: Photo by [Faik Akmd](https://www.pexels.com/@creationsbyfaik?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/photo-of-night-sky-1025469/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)

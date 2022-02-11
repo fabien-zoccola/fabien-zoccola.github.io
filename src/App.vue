@@ -1,9 +1,9 @@
 <template>
-  <nu-theme hue="200" saturation="65" mod="tone strong"></nu-theme>
+  <nu-theme hue="220" saturation="65" mod="tone"></nu-theme>
   <nu-theme
     name="secondary"
-    hue="274"
-    saturation="65"
+    hue="132"
+    saturation="80"
     mod="tone strong"
   ></nu-theme>
   <nu-props
@@ -26,7 +26,17 @@
 <script></script>
 
 <style>
+@font-face {
+  src: url("/fonts/Montserrat-Regular.ttf") format("ttf");
+  font-face-name: Montserrat;
+}
+
+@font-face {
+  src: url("/fonts/Rubik-Regular.ttf") format("ttf");
+  font-face-name: Rubik;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
 }
 </style>

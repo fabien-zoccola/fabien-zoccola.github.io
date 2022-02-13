@@ -36,11 +36,9 @@ import { ProfilePicture } from "@/assets";
 
 export default {
   name: "LandingProfile",
-  data: function () {
-    return {
-      profilepicture: ProfilePicture,
-    };
-  },
+  data: () => ({
+    profilepicture: ProfilePicture,
+  }),
 };
 </script>
 

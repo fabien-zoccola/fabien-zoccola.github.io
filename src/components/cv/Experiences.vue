@@ -11,17 +11,15 @@
 </template>
 
 <script>
+import { json_fetch_return } from "@/assets/utils";
+
 export default {
   name: "Experiences",
   data: () => ({
     items: null,
   }),
-  created() {
-    fetch("/json/experiences.json")
-      .then((response) => response.json())
-      .then((data) => {
-        this.items = data;
-      });
+  async created() {
+    this.items = await json_fetch_return("/json/experiences.json");
   },
 };
 </script>

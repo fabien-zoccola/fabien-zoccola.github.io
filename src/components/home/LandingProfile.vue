@@ -19,26 +19,17 @@
     </nu-flex>
 
     <nu-flex width="40vw">
-      <nu-img
-        :src="profilepicture"
-        height="300px"
-        width="auto"
-        label="Fabien Zoccola"
-        border="0.5x"
-        radius="round"
-      ></nu-img>
+      <ProfilePicture height="300px" />
     </nu-flex>
   </nu-flex>
 </template>
 
 <script>
-import { ProfilePicture } from "@/assets";
+import ProfilePicture from "@/components/elements/ProfilePicture";
 
 export default {
   name: "LandingProfile",
-  data: () => ({
-    profilepicture: ProfilePicture,
-  }),
+  components: { ProfilePicture },
 };
 </script>
 

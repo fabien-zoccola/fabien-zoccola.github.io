@@ -1,5 +1,5 @@
 <template>
-  <template v-for="ex in items">
+  <template v-for="ex in items" :key="ex">
     <nu-card>
       <nu-flow>
         <nu-block :key="ex['type']">{{ ex["type"] }}</nu-block>
@@ -19,7 +19,10 @@ export default {
     items: null,
   }),
   async created() {
-    this.items = await json_fetch_return("/json/experiences.json", FILTER_START_DATE_DESC);
+    this.items = await json_fetch_return(
+      "/json/experiences.json",
+      FILTER_START_DATE_DESC
+    );
   },
 };
 </script>

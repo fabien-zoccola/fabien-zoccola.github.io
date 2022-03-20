@@ -1,3 +1,17 @@
+export function to_html_hex(text) {
+  return text
+    .split("")
+    .map((el) => `&#${el.charCodeAt(0)}`)
+    .join("");
+}
+
+export function from_html_ex(text) {
+  return text
+    .split("&#")
+    .map((el) => String.fromCharCode(Number(el)))
+    .join("");
+}
+
 export function json_fetch_return(url, filter) {
   return fetch(url)
     .then((r) => r.json())

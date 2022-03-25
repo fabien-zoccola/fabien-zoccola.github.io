@@ -17,11 +17,14 @@ export function json_fetch_return(url, filter) {
     .then((r) => r.json())
     .then((data) => {
       if (filter === undefined) filter = FILTER_NONE;
+      console.log(data.sort(filter));
       return data.sort(filter);
     });
 }
 
-export function FILTER_NONE() {}
+export function FILTER_NONE() {
+  return 0;
+}
 export function FILTER_START_DATE_DESC(a, b) {
-  return b["startDate"] > a["startDate"];
+  return b["startDate"] > a["startDate"] ? 1 : -1;
 }

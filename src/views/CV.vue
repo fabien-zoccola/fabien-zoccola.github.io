@@ -1,6 +1,11 @@
 <template>
   <!-- Main heading, full size -->
-  <nu-flex content="space-around" flow="column" text="center">
+  <nu-flex
+    content="space-around"
+    flow="column"
+    text="center"
+    padding="2x bottom"
+  >
     <nu-heading>CV</nu-heading>
     <nu-block>
       <nu-attrs for="link" padding="5px" text="n underline"></nu-attrs>
@@ -11,7 +16,8 @@
       </nu-link>
     </nu-block>
   </nu-flex>
-  <nu-grid columns="25vw 75vw">
+  <hr />
+  <nu-grid columns="15vw 45vw" padding="0 20vw">
     <!-- Sidebar with info and photo -->
     <nu-flex
       content="flex-start"
@@ -70,7 +76,6 @@
 </template>
 
 <script>
-
 import ProfilePicture from "@/components/elements/ProfilePicture";
 import { to_html_hex, from_html_ex } from "@/assets/utils";
 import BlockLinkIcon from "@/components/elements/BlockLinkIcon";
@@ -112,5 +117,9 @@ export default {
 <style scoped>
 nu-link.current {
   background: rgba(30, 201, 217, 0.2);
+}
+
+hr {
+  border-color: lightgreen;
 }
 </style>

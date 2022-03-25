@@ -1,6 +1,25 @@
 <template>
-  <nu-grid columns="25vw 75vw" class="full-height">
-    <nu-flex content="flex-start" align="center" flow="column" padding="4x top" gap="3x">
+  <!-- Main heading, full size -->
+  <nu-flex content="space-around" flow="column" text="center">
+    <nu-heading>CV</nu-heading>
+    <nu-block>
+      <nu-attrs for="link" padding="5px" text="n underline"></nu-attrs>
+      <nu-link to="/#/">Retour à l'accueil</nu-link>
+      <nu-link to="/#/cv/" :class="is('')">Présentation générale</nu-link>
+      <nu-link to="/#/cv/experiences" :class="is('experiences')">
+        Expériences
+      </nu-link>
+    </nu-block>
+  </nu-flex>
+  <nu-grid columns="25vw 75vw">
+    <!-- Sidebar with info and photo -->
+    <nu-flex
+      content="flex-start"
+      align="center"
+      flow="column"
+      padding="4x top"
+      gap="3x"
+    >
       <nu-flex flow="column">
         <ProfilePicture height="250px" />
         <nu-heading level="2" size="xxl" padding="1x top">
@@ -11,13 +30,13 @@
         <nu-heading level="4" size="lg">Contact</nu-heading>
         <BlockLinkIcon
           icon="call-outline"
-          is-link="true"
+          is-link
           :desc="phoneNumber['plain']"
           :link-ref="phoneNumber['ref']"
         />
         <BlockLinkIcon
           icon="mail-outline"
-          is-link="true"
+          is-link
           :desc="email['plain']"
           :link-ref="email['ref']"
         />
@@ -26,21 +45,24 @@
         <nu-heading level="4" size="lg">Réseaux Sociaux</nu-heading>
         <BlockLinkIcon
           icon="logo-linkedin"
-          is-link="true"
+          is-link
           :desc="linkedIn['plain']"
           :link-ref="linkedIn['ref']"
         />
         <BlockLinkIcon
           icon="logo-github"
-          is-link="true"
+          is-link
           :desc="github['plain']"
           :link-ref="github['ref']"
         />
       </nu-flow>
     </nu-flex>
+    <!-- Main content on the right of the sidebar -->
     <nu-flex content="flex-start" flow="column" padding="4x top">
-      <nu-flex>
-        <nu-ph size="h4" opacity=".24" width="20x"></nu-ph>
+      <nu-flex content="space-around">
+        <nu-heading level="3">{{
+          $route.path.split("/").slice(-1)[0].toUpperCase()
+        }}</nu-heading>
       </nu-flex>
       <nu-flow><router-view></router-view></nu-flow>
     </nu-flex>
@@ -48,9 +70,11 @@
 </template>
 
 <script>
+
 import ProfilePicture from "@/components/elements/ProfilePicture";
 import { to_html_hex, from_html_ex } from "@/assets/utils";
 import BlockLinkIcon from "@/components/elements/BlockLinkIcon";
+import { useRoute } from "vue-router";
 
 export default {
   name: "CV",
@@ -75,12 +99,18 @@ export default {
   }),
   methods: {
     from_html_ex,
+    is: (str) => {
+      return str.toLowerCase() ===
+        useRoute().path.split("/").slice(-1)[0].toLowerCase()
+        ? "current"
+        : "";
+    },
   },
 };
 </script>
 
 <style scoped>
-.full-height {
-  min-height: 100vh;
+nu-link.current {
+  background: rgba(30, 201, 217, 0.2);
 }
 </style>

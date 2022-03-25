@@ -10,10 +10,11 @@
     <nu-block>
       <nu-attrs for="link" padding="5px" text="n underline"></nu-attrs>
       <nu-link to="/#/">Retour à l'accueil</nu-link>
-      <nu-link to="/#/cv/" :class="is('')">Présentation générale</nu-link>
+      <nu-link to="/#/cv/" :class="is('')">Présentation</nu-link>
       <nu-link to="/#/cv/experiences" :class="is('experiences')">
         Expériences
       </nu-link>
+      <nu-link to="/#/cv/skills" :class="is('skills')">Compétences</nu-link>
     </nu-block>
   </nu-flex>
   <hr />
@@ -66,9 +67,7 @@
     <!-- Main content on the right of the sidebar -->
     <nu-flex content="flex-start" flow="column" padding="4x top">
       <nu-flex content="space-around">
-        <nu-heading level="3">{{
-          $route.path.split("/").slice(-1)[0].toUpperCase()
-        }}</nu-heading>
+        <nu-heading level="3">{{ $route.name.toUpperCase() }}</nu-heading>
       </nu-flex>
       <nu-flow><router-view></router-view></nu-flow>
     </nu-flex>

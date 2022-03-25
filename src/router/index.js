@@ -5,6 +5,7 @@ import Home from "@/views/Home.vue";
 import CV from "@/views/CV.vue";
 import Experiences from "@/components/cv/Experiences";
 import Informations from "@/components/cv/Informations";
+import Skills from "@/components/cv/Skills";
 
 const routes = [
   {
@@ -22,12 +23,19 @@ const routes = [
       {
         // "main" page of the CV
         // render the default component
+        name: "Présentation",
         path: "",
         component: Informations,
       },
       {
+        name: "Expériences",
         path: "experiences",
         component: Experiences,
+      },
+      {
+        name: "Compétences",
+        path: "skills",
+        component: Skills,
       },
     ],
   },

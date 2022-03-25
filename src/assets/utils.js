@@ -28,3 +28,11 @@ export function FILTER_NONE() {
 export function FILTER_START_DATE_DESC(a, b) {
   return b["startDate"] > a["startDate"] ? 1 : -1;
 }
+export function FILTER_SKILL_LEVEL_DESC(a, b) {
+  if (b["level"] === a["level"]) {
+    if (b["name"] === a["name"]) return 0;
+    else return b["name"] < a["name"] ? 1 : -1;
+  } else {
+    return b["level"] > a["level"] ? 1 : -1;
+  }
+}

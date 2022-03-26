@@ -15,6 +15,7 @@
         Expériences
       </nu-link>
       <nu-link to="/#/cv/skills" :class="is('skills')">Compétences</nu-link>
+      <nu-link to="/#/cv/projects" :class="is('projects')">Projets</nu-link>
     </nu-block>
   </nu-flex>
   <hr />
@@ -116,6 +117,7 @@ export default {
 <style scoped>
 nu-link.current {
   background: rgba(30, 201, 217, 0.2);
+  pointer-events: none;
 }
 
 hr {

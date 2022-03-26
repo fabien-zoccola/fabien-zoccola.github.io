@@ -6,6 +6,7 @@ import CV from "@/views/CV.vue";
 import Experiences from "@/components/cv/Experiences";
 import Informations from "@/components/cv/Informations";
 import Skills from "@/components/cv/Skills";
+import Projects from "@/components/cv/Projects";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
         name: "Compétences",
         path: "skills",
         component: Skills,
+      },
+      {
+        name: "Projets",
+        path: "projects",
+        component: Projects,
       },
     ],
   },

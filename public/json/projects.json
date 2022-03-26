@@ -1,0 +1,15 @@
+{
+  "directory": "projects-info",
+  "projects": {
+    "sso-prototype": {
+      "name": "Prototype d'un SSO",
+      "brief": "Réalisation d'un premier essai de création d'un service d'authentification centralisée",
+      "date": "2020-04"
+    },
+    "uber-iut": {
+      "name": "Uber IUTs",
+      "brief": "Projet d'intelligence artificielle réalisé lors d'un concours national des départements Informatiques des IUTs",
+      "date": "2021-04"
+    }
+  }
+}

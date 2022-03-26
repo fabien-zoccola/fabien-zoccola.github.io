@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { json_fetch_return, FILTER_START_DATE_DESC } from "@/assets/utils";
+import { json_fetch_return, FILTER_DESC } from "@/assets/utils";
 
 export default {
   name: "Experiences",
@@ -21,7 +21,9 @@ export default {
   async created() {
     this.items = await json_fetch_return(
       "/json/experiences.json",
-      FILTER_START_DATE_DESC
+      null,
+      FILTER_DESC,
+      "startDate"
     );
   },
 };

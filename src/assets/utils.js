@@ -12,27 +12,49 @@ export function from_html_ex(text) {
     .join("");
 }
 
-export function json_fetch_return(url, filter) {
+export function json_fetch_return(url, selector, filter, ...filter_criteria) {
   return fetch(url)
     .then((r) => r.json())
     .then((data) => {
-      if (filter === undefined) filter = FILTER_NONE;
-      console.log(data.sort(filter));
-      return data.sort(filter);
+      // select a part of the array
+      if (typeof selector != "undefined" && selector != null) {
+        for (const sel of selector) {
+          data = data[sel];
+        }
+      }
+      // transform the eventual dictionary in an array
+      data = _transform_object_to_array(data);
+      // filter the array
+      if (filter === undefined) return data;
+      return data.sort((a, b) => filter(a, b, ...filter_criteria));
     });
 }
 
-export function FILTER_NONE() {
-  return 0;
-}
-export function FILTER_START_DATE_DESC(a, b) {
-  return b["startDate"] > a["startDate"] ? 1 : -1;
-}
-export function FILTER_SKILL_LEVEL_DESC(a, b) {
-  if (b["level"] === a["level"]) {
-    if (b["name"] === a["name"]) return 0;
-    else return b["name"] < a["name"] ? 1 : -1;
-  } else {
-    return b["level"] > a["level"] ? 1 : -1;
+function _transform_object_to_array(object) {
+  let arr = [];
+
+  for (const name in object) {
+    // push the value to the array
+    arr.push(object[name]);
+    // add the key in the value
+    arr[arr.length - 1]["__key"] = name;
   }
+  return arr;
+}
+
+export function FILTER_DESC(a, b, criterium) {
+  return b[criterium] > a[criterium] ? 1 : -1;
+}
+
+export function FILTER_DESC_THEN_ALPHABETICAL(a, b, criterium, name_criterium) {
+  if (b[criterium] === a[criterium]) {
+    return FILTER_ALPHABETICAL_ORDER(a, b, name_criterium);
+  } else {
+    return b[criterium] > a[criterium] ? 1 : -1;
+  }
+}
+
+export function FILTER_ALPHABETICAL_ORDER(a, b, criterium) {
+  if (a[criterium] === a[criterium]) return 0;
+  else return a[criterium] > b[criterium] ? 1 : -1;
 }

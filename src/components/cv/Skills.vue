@@ -14,7 +14,10 @@
 </template>
 
 <script>
-import { json_fetch_return, FILTER_SKILL_LEVEL_DESC } from "@/assets/utils";
+import {
+  json_fetch_return,
+  FILTER_DESC_THEN_ALPHABETICAL,
+} from "@/assets/utils";
 
 export default {
   name: "Skills",
@@ -24,7 +27,10 @@ export default {
   async created() {
     this.items = await json_fetch_return(
       "/json/skills.json",
-      FILTER_SKILL_LEVEL_DESC
+      null,
+      FILTER_DESC_THEN_ALPHABETICAL,
+      "level",
+      "name"
     );
   },
 };

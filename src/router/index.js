@@ -1,12 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import Home from "@/views/Home.vue";
+import NotFound from "@/views/NotFound.vue";
 
 import CV from "@/views/CV.vue";
 import Experiences from "@/components/cv/Experiences";
 import Informations from "@/components/cv/Informations";
 import Skills from "@/components/cv/Skills";
 import Projects from "@/components/cv/Projects";
+import ProjectDetails from "@/components/projects/ProjectDetails";
 
 const routes = [
   {
@@ -45,11 +47,21 @@ const routes = [
       },
     ],
   },
+  {
+    name: "ProjectDetails",
+    path: "/project/:slug",
+    component: ProjectDetails,
+  },
   // {
   //   path: "/about",
   //   name: "About",
   //   component: () => import("../views/About.vue"),
   // },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({

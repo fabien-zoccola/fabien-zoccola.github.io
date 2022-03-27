@@ -21,13 +21,33 @@ export function json_fetch_return(url, selector, filter, ...filter_criteria) {
         for (const sel of selector) {
           data = data[sel];
         }
+
+        // transform the eventual dictionary in an array
+        data = _transform_object_to_array(data);
       }
-      // transform the eventual dictionary in an array
-      data = _transform_object_to_array(data);
+
       // filter the array
       if (filter === undefined) return data;
       return data.sort((a, b) => filter(a, b, ...filter_criteria));
     });
+}
+
+export async function fetch_project(projectsFile, slug) {
+  let projects = await json_fetch_return(projectsFile);
+
+  let directory =
+    projectsFile.split("/").slice(0, -1).join("/") +
+    "/" +
+    projects["directory"];
+
+  // eslint-disable-next-line no-prototype-builtins
+  if (!projects["projects"].hasOwnProperty(slug)) return null;
+  else {
+    let p = projects["projects"][slug];
+    let data = await json_fetch_return(`${directory}/${slug}.json`);
+
+    return Object.assign(data, p);
+  }
 }
 
 function _transform_object_to_array(object) {

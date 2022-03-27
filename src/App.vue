@@ -26,17 +26,8 @@
 <script></script>
 
 <style>
-@font-face {
-  src: url("/fonts/Montserrat-Regular.ttf") format("ttf");
-  font-face-name: Montserrat;
-}
-
-@font-face {
-  src: url("/fonts/Rubik-Regular.ttf") format("ttf");
-  font-face-name: Rubik;
-}
-
 #app {
-  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
 }
 </style>

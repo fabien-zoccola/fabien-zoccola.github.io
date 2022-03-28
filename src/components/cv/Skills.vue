@@ -1,16 +1,37 @@
 <template>
-  <template v-for="skill in items" :key="skill">
-    <nu-card>
-      <nu-flow>
-        <nu-block :key="skill['name']">{{ skill["name"] }}</nu-block>
-        <nu-block :key="skill['level']">Niveau {{ skill["level"] }}/5</nu-block>
-        <nu-heading level="5">Compétences associées :</nu-heading>
-        <nu-block v-for="c in skill['children']" :key="c">
-          {{ c }}
-        </nu-block>
-      </nu-flow>
-    </nu-card>
-  </template>
+  <nu-grid flow="row" gap="2x">
+    <template v-for="skill in items" :key="skill">
+      <nu-card clear shadow=".5">
+        <nu-flex content="space-between">
+          <nu-flow>
+            <nu-heading level="3" size="xl" :key="skill['name']">
+              {{ skill["name"] }}
+            </nu-heading>
+            <nu-el
+              v-for="c in skill['children']"
+              class="subskills"
+              :key="c"
+              padding="10px right"
+            >
+              {{ c }}
+            </nu-el>
+          </nu-flow>
+          <nu-block>
+            <nu-icon
+              name="star"
+              v-for="c in Number(skill['level'])"
+              :key="c"
+            ></nu-icon>
+            <nu-icon
+              name="star-outline"
+              v-for="c in maxStars - Number(skill['level'])"
+              :key="c"
+            ></nu-icon>
+          </nu-block>
+        </nu-flex>
+      </nu-card>
+    </template>
+  </nu-grid>
 </template>
 
 <script>
@@ -23,6 +44,7 @@ export default {
   name: "Skills",
   data: () => ({
     items: null,
+    maxStars: 5,
   }),
   async created() {
     this.items = await json_fetch_return(
@@ -36,4 +58,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.subskills:not(:last-child):after {
+  content: ",";
+}
+</style>

@@ -68,9 +68,13 @@
     <!-- Main content on the right of the sidebar -->
     <nu-flex content="flex-start" flow="column" padding="4x top">
       <nu-flex content="space-around">
-        <nu-heading level="3">{{ $route.name.toUpperCase() }}</nu-heading>
+        <nu-heading level="3" padding="2x bottom">
+          {{ $route.name.toUpperCase() }}
+        </nu-heading>
       </nu-flex>
-      <nu-flow><router-view></router-view></nu-flow>
+      <nu-flow height="max 65vh" overflow="n y" padding="1x">
+        <router-view></router-view>
+      </nu-flow>
     </nu-flex>
   </nu-grid>
 </template>

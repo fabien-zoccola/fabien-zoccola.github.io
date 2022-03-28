@@ -50,6 +50,13 @@ export async function fetch_project(projectsFile, slug) {
   }
 }
 
+export function get_experiences_categories(experiences) {
+  return experiences.reduce((acc, cur) => {
+    if (!acc.includes(cur["type"])) acc.push(cur["type"]);
+    return acc;
+  }, []);
+}
+
 function _transform_object_to_array(object) {
   let arr = [];
 

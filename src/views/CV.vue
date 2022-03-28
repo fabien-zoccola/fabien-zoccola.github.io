@@ -72,7 +72,7 @@
           {{ $route.name.toUpperCase() }}
         </nu-heading>
       </nu-flex>
-      <nu-flow height="max 65vh" overflow="n y" padding="1x">
+      <nu-flow height="65vh" overflow="n y" padding="1x">
         <nu-attrs for="card" clear shadow=".5"></nu-attrs>
         <router-view></router-view>
       </nu-flow>

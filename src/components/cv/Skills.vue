@@ -1,7 +1,7 @@
 <template>
   <nu-grid flow="row" gap="2x">
     <template v-for="skill in items" :key="skill">
-      <nu-card clear shadow=".5">
+      <nu-card>
         <nu-flex content="space-between">
           <nu-flow>
             <nu-heading level="3" size="xl" :key="skill['name']">
@@ -12,6 +12,7 @@
               class="subskills"
               :key="c"
               padding="10px right"
+              theme="primary"
             >
               {{ c }}
             </nu-el>

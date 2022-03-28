@@ -1,16 +1,24 @@
 <template>
-  <template v-for="project in items" :key="project">
-    <nu-link :to="`/#/project/${project['__key']}`" text="n">
-      <nu-card>
-        <nu-flow>
-          <nu-heading level="5" :key="project['name']">
-            {{ project["name"] }}
-          </nu-heading>
-          <nu-block :key="project['brief']">{{ project["brief"] }}</nu-block>
-        </nu-flow>
-      </nu-card>
-    </nu-link>
-  </template>
+  <nu-grid flow="row" gap="2x">
+    <template v-for="project in items" :key="project">
+      <nu-link :to="`/#/project/${project['__key']}`" text="n">
+        <nu-card>
+          <nu-flow>
+            <nu-block>
+              <nu-heading display="inline" level="5" :key="project['name']">
+                {{ project["name"] }}
+              </nu-heading>
+              <nu-el padding="1x left">
+                -
+                <nu-datetime month year :value="project['date']"></nu-datetime>
+              </nu-el>
+            </nu-block>
+            <nu-block :key="project['brief']">{{ project["brief"] }}</nu-block>
+          </nu-flow>
+        </nu-card>
+      </nu-link>
+    </template>
+  </nu-grid>
 </template>
 
 <script>

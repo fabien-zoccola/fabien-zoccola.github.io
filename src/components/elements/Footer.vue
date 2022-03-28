@@ -8,7 +8,7 @@
     id="footer"
   >
     <nu-flex flow="column">
-      <nu-block>&copy; Copyright 2021 - All rights reserved</nu-block>
+      <nu-block>&copy; Copyright 2022 - All rights reserved</nu-block>
       <nu-block>
         Made by hand with <nu-icon name="heart" color="red"></nu-icon> by Fabien
         Zoccola using <nu-link to="https://vuejs.org/">Vue.js</nu-link>

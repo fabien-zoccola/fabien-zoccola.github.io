@@ -17,9 +17,15 @@
     special-shadow-color="#secondary-special-shadow"
   ></nu-props>
   <router-view />
+  <Footer />
 </template>
 
-<script></script>
+<script>
+import Footer from "@/components/elements/Footer";
+export default {
+  components: { Footer },
+};
+</script>
 
 <style>
 #app {

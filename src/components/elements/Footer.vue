@@ -5,7 +5,6 @@
     align="center"
     theme="primary"
     fill="background"
-    id="footer"
   >
     <nu-flex flow="column">
       <nu-block>&copy; Copyright 2022 - All rights reserved</nu-block>
@@ -23,10 +22,4 @@ export default {
 };
 </script>
 
-<style scoped>
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-}
-</style>
+<style scoped></style>

@@ -16,8 +16,14 @@
     border-color="#secondary-border"
     special-shadow-color="#secondary-special-shadow"
   ></nu-props>
-  <router-view />
-  <Footer />
+
+  <nu-flex flow="column" height="100vh">
+    <nu-flow grow="0" id="main-container">
+      <router-view />
+    </nu-flow>
+    <nu-block grow="1"></nu-block>
+    <Footer grow="0" />
+  </nu-flex>
 </template>
 
 <script>
@@ -28,7 +34,8 @@ export default {
 </script>
 
 <style>
-#app {
+#app,
+#main-container {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", sans-serif;
   background: #1c2d33;

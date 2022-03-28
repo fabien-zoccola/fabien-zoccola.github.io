@@ -24,9 +24,32 @@
           v-show="currentCategory === ex['type'] || currentCategory == null"
         >
           <nu-flow>
-            <nu-block :key="ex['type']">{{ ex["type"] }}</nu-block>
-            <nu-block :key="ex['jobTitle']">{{ ex["jobTitle"] }}</nu-block>
-            <nu-block :key="ex['company']">{{ ex["company"] }}</nu-block>
+            <nu-heading level="3" size="xl" :key="ex['jobTitle']">
+              {{ ex["jobTitle"] }}
+            </nu-heading>
+
+            <nu-heading level="4" size="md" text="i" theme="primary">
+              <nu-datetime
+                month
+                year
+                :key="ex['startDate']"
+                :value="ex['startDate']"
+              ></nu-datetime>
+              -
+              <nu-datetime
+                month
+                year
+                v-if="ex['endDate'].length > 0"
+                :key="ex['endDate']"
+                :value="ex['endDate']"
+              ></nu-datetime>
+              <nu-el v-else>présent</nu-el>
+            </nu-heading>
+
+            <nu-flex gap="0.5x" theme="primary">
+              <nu-in :key="ex['company']">{{ ex["company"] }}</nu-in>
+              <nu-in :key="ex['type']">({{ ex["type"] }})</nu-in>
+            </nu-flex>
           </nu-flow>
         </nu-card>
       </template>

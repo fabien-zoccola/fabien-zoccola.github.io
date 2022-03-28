@@ -1,5 +1,5 @@
 <template>
-  <nu-theme hue="220" saturation="65" mod="tone"></nu-theme>
+  <nu-theme hue="220" saturation="65" mod="tone strong"></nu-theme>
   <nu-theme
     name="secondary"
     hue="132"
@@ -16,10 +16,6 @@
     border-color="#secondary-border"
     special-shadow-color="#secondary-special-shadow"
   ></nu-props>
-  <!--  <div id="nav">-->
-  <!--    <router-link to="/">Home</router-link> |-->
-  <!--    <router-link to="/about">About</router-link>-->
-  <!--  </div>-->
   <router-view />
 </template>
 
@@ -29,5 +25,6 @@
 #app {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", sans-serif;
+  background: #1c2d33;
 }
 </style>

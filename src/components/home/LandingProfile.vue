@@ -1,6 +1,5 @@
 <template>
   <nu-flex height="80vh" class="landing">
-    <nu-theme hue="186" saturation="65" mod="tone strong"></nu-theme>
     <nu-attrs
       for="flex"
       style="justify-content: center; align-items: center"

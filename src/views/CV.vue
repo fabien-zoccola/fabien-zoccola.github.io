@@ -16,6 +16,9 @@
       </nu-link>
       <nu-link to="/#/cv/skills" :class="is('skills')">Compétences</nu-link>
       <nu-link to="/#/cv/projects" :class="is('projects')">Projets</nu-link>
+      <nu-link to="/#/cv/formations" :class="is('formations')">
+        Formation
+      </nu-link>
     </nu-block>
   </nu-flex>
   <hr />

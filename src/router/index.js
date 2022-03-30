@@ -9,6 +9,7 @@ import Informations from "@/components/cv/Informations";
 import Skills from "@/components/cv/Skills";
 import Projects from "@/components/cv/Projects";
 import ProjectDetails from "@/components/projects/ProjectDetails";
+import Formations from "@/components/cv/Formations";
 
 const routes = [
   {
@@ -45,6 +46,11 @@ const routes = [
         path: "projects",
         component: Projects,
       },
+      {
+        name: "Formation",
+        path: "formations",
+        component: Formations,
+      },
     ],
   },
   {
@@ -52,11 +58,6 @@ const routes = [
     path: "/project/:slug",
     component: ProjectDetails,
   },
-  // {
-  //   path: "/about",
-  //   name: "About",
-  //   component: () => import("../views/About.vue"),
-  // },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import Home from "@/views/Home.vue";
 import NotFound from "@/views/NotFound.vue";
+import Video from "@/views/Video";
 
 import CV from "@/views/CV.vue";
 import Experiences from "@/components/cv/Experiences";
@@ -17,6 +18,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/video",
+    name: "Video",
+    component: Video,
   },
   {
     // CV page

@@ -1,5 +1,5 @@
 <template>
-  <nu-flex height="80vh" class="landing">
+  <nu-flex height="70vh" class="landing">
     <nu-attrs
       for="flex"
       style="justify-content: center; align-items: center"

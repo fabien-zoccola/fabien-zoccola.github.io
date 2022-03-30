@@ -28,6 +28,8 @@
       padding="4x top"
       gap="3x"
     >
+      <nu-attrs for="heading" level="4" size="lg"></nu-attrs>
+
       <nu-flex flow="column">
         <ProfilePicture height="250px" />
         <nu-heading level="2" size="xxl" padding="1x top">
@@ -35,7 +37,7 @@
         </nu-heading>
       </nu-flex>
       <nu-flow>
-        <nu-heading level="4" size="lg">Contact</nu-heading>
+        <nu-heading>Contact</nu-heading>
         <BlockLinkIcon
           icon="call-outline"
           is-link
@@ -50,7 +52,7 @@
         />
       </nu-flow>
       <nu-flow>
-        <nu-heading level="4" size="lg">Réseaux Sociaux</nu-heading>
+        <nu-heading>Réseaux Sociaux</nu-heading>
         <BlockLinkIcon
           icon="logo-linkedin"
           is-link
@@ -63,6 +65,19 @@
           :desc="github['plain']"
           :link-ref="github['ref']"
         />
+      </nu-flow>
+      <nu-flow>
+        <nu-heading>Version PDF</nu-heading>
+        <nu-link
+          to="https://mega.nz/file/qaITmaqQ#wiv5yUNlHmlmz8hNA_7pz5WEHcsUNdt7oMLQI_vvB8Q"
+          text="n"
+          theme="primary"
+        >
+          <nu-btn>
+            <nu-icon name="download-outline"></nu-icon>
+            Télécharger le CV
+          </nu-btn>
+        </nu-link>
       </nu-flow>
     </nu-flex>
     <!-- Main content on the right of the sidebar -->

@@ -4,15 +4,17 @@
       <SiteLogo />
     </nu-link>
     <nu-block grow="1"></nu-block>
-    <nu-menu>
-      <template v-for="item in this.menu" :key="item">
-        <nu-menuitem>
-          <nu-link :to="`/#${item['link']}`" :key="item">
-            {{ item["text"] }}
-          </nu-link>
-        </nu-menuitem>
-      </template>
-    </nu-menu>
+    <nu-flex content="flex-end" gap="3x" items="center">
+      <nu-link
+        v-for="item in this.menu"
+        :to="`/#${item['link']}`"
+        :key="item"
+        size="lg"
+        padding="0 1x"
+      >
+        {{ item["text"] }}
+      </nu-link>
+    </nu-flex>
   </nu-flex>
 </template>
 
@@ -24,8 +26,9 @@ export default {
   components: { SiteLogo },
   data: () => ({
     menu: [
-      { link: "", text: "" },
-      { link: "/cv", text: "CV" },
+      { link: "/cv/projects", text: "Projets" },
+      { link: "/video", text: "Présentation vidéo" },
+      { link: "/cv/", text: "CV" },
     ],
   }),
 };

@@ -4,7 +4,7 @@
   <nu-flex flow="column" items="center" gap="2x">
     <nu-attrs for="card" clear padding="2x" theme="primary"></nu-attrs>
 
-    <nu-heading level="2">Présentation Vidéo</nu-heading>
+    <nu-heading level="2">Vidéo - Projet du Hackathon</nu-heading>
     <nu-card>
       <nu-flow gap align="center">
         <nu-block>

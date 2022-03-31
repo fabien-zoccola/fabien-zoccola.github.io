@@ -10,6 +10,15 @@
       "name": "Uber IUTs",
       "brief": "Projet d'intelligence artificielle réalisé lors d'un concours national des départements Informatiques des IUTs",
       "date": "2021-04"
+    },
+    "proedt": {
+      "name": "ProEDT",
+      "brief": "Visualisateur de calendrier pour le département Informatique de l'IUT de Montpellier-Sète",
+      "date": "2021-08"
+    },
+    "rth": {
+      "name": "Routing Tables Helper",
+      "brief": "Visualisateur de chemins de routage et de tables de routage"
     }
   }
 }

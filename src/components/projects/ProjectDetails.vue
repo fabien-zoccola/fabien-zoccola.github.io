@@ -1,4 +1,6 @@
 <template>
+  <Navbar minimal />
+
   <nu-attrs
     for="heading"
     text="n b"
@@ -8,7 +10,7 @@
   ></nu-attrs>
   <nu-attrs for="list" padding="4x left"></nu-attrs>
 
-  <nu-grid content="center">
+  <nu-grid content="center" padding="2x top">
     <nu-flow width="80vw">
       <nu-attrs for="flow" padding="2x 0"></nu-attrs>
 
@@ -47,7 +49,7 @@
       <nu-flow>
         <nu-heading level="4">Contexte</nu-heading>
 
-        <nu-block>{{ project['context']['brief'] }}</nu-block>
+        <nu-block>{{ project["context"]["brief"] }}</nu-block>
         <nu-spacer></nu-spacer>
         <nu-list>
           <nu-listitem>
@@ -93,7 +95,7 @@
         <nu-heading level="4">
           Compétences mobilisées et/ou acquises au cours du projet
         </nu-heading>
-        <nu-grid columns="repeat(2, auto)" gap="5x">
+        <nu-grid columns="repeat(2, 50%)" content="center" gap="5x">
           <!-- Compétences informatiques -->
           <nu-flow align="right">
             <nu-heading>
@@ -109,7 +111,10 @@
             <nu-heading>
               <nu-icon name="folder-outline"></nu-icon> Transversales
             </nu-heading>
-            <nu-block v-for="text in project['skills']['IT']" :key="text">
+            <nu-block
+              v-for="text in project['skills']['interdisciplinary']"
+              :key="text"
+            >
               {{ text }}
             </nu-block>
           </nu-flow>
@@ -121,9 +126,11 @@
 
 <script>
 import { fetch_project } from "@/assets/utils";
+import Navbar from "@/components/elements/Navbar";
 
 export default {
   name: "ProjectDetails",
+  components: { Navbar },
   data: () => ({
     project: null,
   }),

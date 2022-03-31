@@ -1,7 +1,7 @@
 <template>
-  <nu-flex padding="2x 4x">
+  <nu-flex padding="2x 4x" shadow="0.75">
     <nu-link to="/#/">
-      <SiteLogo />
+      <SiteLogo :minimal="minimal" />
     </nu-link>
     <nu-block grow="1"></nu-block>
     <nu-flex content="flex-end" gap="3x" items="center">
@@ -11,6 +11,7 @@
         :key="item"
         size="lg"
         padding="0 1x"
+        text="n b :hover[]"
       >
         {{ item["text"] }}
       </nu-link>
@@ -24,10 +25,14 @@ import SiteLogo from "@/components/elements/SiteLogo";
 export default {
   name: "Navbar",
   components: { SiteLogo },
+  props: {
+    minimal: Boolean,
+  },
   data: () => ({
     menu: [
+      { link: "/", text: "Accueil" },
       { link: "/cv/projects", text: "Projets" },
-      { link: "/video", text: "Présentation vidéo" },
+      { link: "/video", text: "Vidéo Hackathon" },
       { link: "/cv/", text: "CV" },
     ],
   }),

@@ -5,30 +5,39 @@
   },
 
   "objectives": [
-    ""
+    "Réaliser un programme capable de calculer des objets complexes",
+    "Modéliser les réseaux de routage informatique",
+    "Concevoir une interface en lignes de commandes"
   ],
 
   "context": {
     "brief": "",
-    "startDate": "",
+    "startDate": "2020-07",
     "endDate": "",
-    "object": ""
+    "object": "Application capable de construire un réseau de routage",
+    "endIsDiscontinuation": true
   },
 
   "critical": {
-    "expectation": "",
-    "constraints": "",
+    "expectation": "Programme construisant virtuellement un réseau pour l'utilisateur en s'adaptant à ce dernier",
+    "constraints": "Rapidité d'éxécution; Efficacité et précision du traitement; Capacité à gérer tous les cas possibles",
     "results": ""
   },
 
-  "realisation": "",
+  "realisation": "J'ai réalisé l'interface en lignes de commandes ainsi que la logique du logiciel, aidé de certaines personnes extérieures qui me conseillaient sur les systèmes complexes mis en évidence. Ce projet est pour le moment toujours en travail mais la première version stable est disponible sur Github.",
 
   "skills": {
     "IT": [
-      ""
+      "Utiliser des concepts avancés de Python",
+      "Concevoir une architecture précise",
+      "Connaître les interfaces en lignes de commandes",
+      "Écrire des tests afin de vérifier le bon fonctionnement"
     ],
     "interdisciplinary": [
-      ""
+      "Identifier les problèmes apparents",
+      "Vérifier le travail effectué",
+      "Morceler la tâche principale en sous-tâches",
+      "Reconnaître les optimisations à appliquer"
     ]
   }
 }

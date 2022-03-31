@@ -18,7 +18,8 @@
     },
     "rth": {
       "name": "Routing Tables Helper",
-      "brief": "Visualisateur de chemins de routage et de tables de routage"
+      "brief": "Visualisateur de chemins de routage et de tables de routage",
+      "date": "2020-07"
     }
   }
 }

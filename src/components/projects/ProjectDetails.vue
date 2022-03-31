@@ -51,15 +51,26 @@
 
         <nu-block>{{ project["context"]["brief"] }}</nu-block>
         <nu-spacer></nu-spacer>
-        <nu-list>
+        <nu-list v-if="project['context']['endIsDiscontinuation'] === true">
           <nu-listitem>
-            Date de début du projet: {{ project["context"]["startDate"] }}
+            Date de début du projet : {{ project["context"]["startDate"] }}
+          </nu-listitem>
+          <nu-listitem v-if="project['context']['endDate'].length > 0">
+            Date d'arrêt du projet : {{ project["context"]["endDate"] }}
           </nu-listitem>
           <nu-listitem>
-            Date de livraison: {{ project["context"]["endDate"] }}
+            Objet des livrables : {{ project["context"]["object"] }}
+          </nu-listitem>
+        </nu-list>
+        <nu-list v-else>
+          <nu-listitem>
+            Date de début du projet : {{ project["context"]["startDate"] }}
           </nu-listitem>
           <nu-listitem>
-            Objet de la livraison: {{ project["context"]["object"] }}
+            Date de livraison : {{ project["context"]["endDate"] }}
+          </nu-listitem>
+          <nu-listitem>
+            Objet de la livraison : {{ project["context"]["object"] }}
           </nu-listitem>
         </nu-list>
       </nu-flow>

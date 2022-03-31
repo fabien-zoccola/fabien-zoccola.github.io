@@ -13,8 +13,9 @@
   "context": {
     "brief": "Cette application a été créée en duo avec Nathan Rouché pour remplacer PROSE, le calendrier de l'Université de Montpellier.",
     "startDate": "août 2021",
-    "endDate": "avril 2022 (arrêt définitif par manque de temps)",
-    "object": "Création et mise en ligne du site"
+    "endDate": "avril 2022",
+    "object": "Création et mise en ligne du site",
+    "endIsDiscontinuation": true
   },
 
   "critical": {
@@ -23,7 +24,7 @@
     "results": ""
   },
 
-  "realisation": "J'ai développé le projet en collaboration avec Nathan Rouché. J'étais chargé de la réalisation du back-end PHP, tandis que Nathan réalisait le front-end en JavaScript. J'ai réalisé la documentation ainsi que l'API du projet, et ai aidé au développement des fonctionnalités qui étaient demandées par les membres qui utilisaient l'application",
+  "realisation": "J'ai développé le projet en collaboration avec Nathan Rouché. J'étais chargé de la réalisation du back-end PHP, tandis que Nathan réalisait le front-end en JavaScript. J'ai réalisé la documentation ainsi que l'API du projet, et j'ai aidé au développement des fonctionnalités demandées par les membres qui utilisaient l'application",
 
   "skills": {
     "IT": [

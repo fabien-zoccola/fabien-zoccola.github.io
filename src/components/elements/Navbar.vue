@@ -31,6 +31,7 @@ export default {
   data: () => ({
     menu: [
       { link: "/", text: "Accueil" },
+      { link: "/presentation", text: "Présentation" },
       { link: "/cv/projects", text: "Projets" },
       { link: "/video", text: "Vidéo Hackathon" },
       { link: "/cv/", text: "CV" },

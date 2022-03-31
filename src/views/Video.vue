@@ -1,7 +1,7 @@
 <template>
   <Navbar />
 
-  <nu-flex flow="column" items="center" gap="2x">
+  <nu-flex flow="column" items="center" gap="2x" padding="3x top">
     <nu-attrs for="card" clear padding="2x" theme="primary"></nu-attrs>
 
     <nu-heading level="2">Vidéo - Projet du Hackathon</nu-heading>

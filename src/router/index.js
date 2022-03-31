@@ -20,6 +20,11 @@ const routes = [
     component: asyncRoute("views/Video"),
   },
   {
+    path: "/presentation",
+    name: "Présentation",
+    component: asyncRoute("views/Presentation"),
+  },
+  {
     // CV page
     path: "/cv",
     name: "CV",

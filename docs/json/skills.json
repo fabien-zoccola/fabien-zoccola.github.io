@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Java",
+    "level": 4,
+    "children": ["Maven", "JavaFX"]
+  },
+  {
+    "name": "Développement Front-End",
+    "level": 3,
+    "children": ["HTML/CSS", "JavaScript", "Vue.JS"]
+  },
+  {
+    "name": "Bases de données relationelles",
+    "level": 3,
+    "children": ["MySQL", "Oracle", "Scripts PL/SQL"]
+  },
+  {
+    "name": "VCS (Version Control)",
+    "level": 4,
+    "children": ["Github"]
+  },
+  {
+    "name": "Développement Back-End",
+    "level": 4,
+    "children": ["PHP MVC", "Symfony"]
+  },
+  {
+    "name": "CI/CD",
+    "level": 2,
+    "children": ["Docker", "Kubernetes"]
+  },
+  {
+    "name": "Gestion de projet",
+    "level": 3,
+    "children": ["Méthodes agiles", "Tenue de réunions"]
+  },
+  {
+    "name": "Architecture systèmes et réseaux",
+    "level": 4,
+    "children": ["C", "TCP/IP", "Linux"]
+  }
+]

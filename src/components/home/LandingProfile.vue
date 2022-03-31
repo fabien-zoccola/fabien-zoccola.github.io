@@ -37,6 +37,6 @@ export default {
 
 <style scoped>
 .landing {
-  background-image: url("~@/assets/landing-banner.jpg");
+  background: url("~@/assets/landing-banner.jpg") center/cover;
 }
 </style>

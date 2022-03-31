@@ -1,0 +1,18 @@
+[
+  {
+    "name": "DUT Informatique",
+    "school": "IUT de Montpellier-Sète",
+    "startDate": "2020",
+    "endDate": "",
+    "honours": "",
+    "additional_info": ["En cours de deuxième année", "Second major de promotion en 1ère année"]
+  },
+  {
+    "name": "Baccalauréat Scientifique",
+    "school": "IUT de Montpellier-Sète",
+    "startDate": "2018",
+    "endDate": "2020",
+    "honours": "Très bien",
+    "additional_info": ["Option SVT", "Spécialité ISN"]
+  }
+]

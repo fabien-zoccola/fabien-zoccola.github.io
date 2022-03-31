@@ -1,0 +1,44 @@
+{
+  "quote": {
+    "text": "Uber IUTs est une reproduction non conforme du système de livraison au nom apparenté, modélisée en jeu vidéo afin de permettre une réalisation d'une intelligence artificielle",
+    "link": ""
+  },
+
+  "objectives": [
+    "Projet en équipes de 5-6",
+    "Développer une Intelligence Artificielle",
+    "La faire concourir contre les autres IA développées par les équipes"
+  ],
+
+  "context": {
+    "brief": "Cette IA en Python a été réalisée durant le concours \"Les presque 24H des IUTs\", qui s'est déroulé le 22 mai 2021 de 7h30 à 20h.",
+    "startDate": "22 mai 2021 à 8H",
+    "endDate": "22 mai 2021 à 21H",
+    "object": "Intelligence Artificielle réalisée en un langage de notre choix"
+  },
+
+  "critical": {
+    "expectation": "Utilisation d'algorithmes avancés de pathfinding (\"découverte de chemin\") et de réalisation du plus de défis possibles",
+    "constraints": "l'IA doit pouvoir se connecter au jeu Uber IUT sur la machine locale",
+    "results": "Prix du plus grand nombre de défis remportés; 5ème place du classement Intelligence Artificielle"
+  },
+
+  "realisation": "Ce projet a été réalisé en équipe (l'équipe étant la même que celle qui a gagné la Code Game Jam 2021, ayant été proposée pour ce concours). Nous avons choisi de coder l'Intelligence Artificielle en Python, pour la simplicité du langage et de sa syntaxe. Nous avons choisi l'algorithme A* (prononcé \"A étoile\") pour le pathfinding et avons réalisé une IA qui s'adapte aux joueurs ennemis afin de marquer plus de points.",
+
+  "skills": {
+    "IT": [
+      "Concevoir une Intelligence Artificielle",
+      "Organiser la codebase (endroit où se trouve le code)",
+      "Produire des algorithmes de calcul et de choix",
+      "Limiter la complexité en temps et en syntaxe du programme",
+      "Résoudre les problèmes algorithmiques"
+    ],
+    "interdisciplinary": [
+      "Communiquer avec l'équipe",
+      "Identifier les problèmes qui surviennent",
+      "Morceler la tâche principale en sous-objectifs",
+      "Argumenter les changements effectués auprès de l'équipe",
+      "Vérifier le travail effectué par soi et par les autres"
+    ]
+  }
+}

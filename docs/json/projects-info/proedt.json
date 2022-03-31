@@ -1,0 +1,41 @@
+{
+  "quote": {
+    "text": "Visualisateur de calendrier pour le département Informatique de l'IUT de Montpellier-Sète",
+    "link": "https://proedt.fr/"
+  },
+
+  "objectives": [
+    "Réaliser une interface de calendrier",
+    "Construire une API",
+    "Utiliser les API mises à disposition par l'université"
+  ],
+
+  "context": {
+    "brief": "Cette application a été créée en duo avec Nathan Rouché pour remplacer PROSE, le calendrier de l'Université de Montpellier.",
+    "startDate": "août 2021",
+    "endDate": "avril 2022",
+    "object": "Création et mise en ligne du site",
+    "endIsDiscontinuation": true
+  },
+
+  "critical": {
+    "expectation": "Application de calendrier fonctionnelle permettant l'accès en consultation depuis le site ou une application enregistrée",
+    "constraints": "Disponibilité du site; Accessibilité de l'API; Compatibilité avec les applications de calendrier",
+    "results": ""
+  },
+
+  "realisation": "J'ai développé le projet en collaboration avec Nathan Rouché. J'étais chargé de la réalisation du back-end PHP, tandis que Nathan réalisait le front-end en JavaScript. J'ai réalisé la documentation ainsi que l'API du projet, et j'ai aidé au développement des fonctionnalités demandées par les membres qui utilisaient l'application",
+
+  "skills": {
+    "IT": [
+      "Réaliser un site en PHP",
+      "Créer une interface en JavaScript",
+      "Concevoir une architecture de traitement automatique"
+    ],
+    "interdisciplinary": [
+      "Travailler en collaboration",
+      "Analyser les besoins conceptuels",
+      "Interpréter les retours utilisateurs"
+    ]
+  }
+}

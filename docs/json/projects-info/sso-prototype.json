@@ -1,0 +1,45 @@
+{
+  "quote": {
+    "text": "Le Single Sign-on (SSO) est un service d'authentification de session et d'utilisateur qui permet à un utilisateur d'utiliser un ensemble d'informations d'identification (par exemple, nom et mot de passe) pour accéder à plusieurs applications.",
+    "link": "https://www.oracle.com/fr/security/qu-est-ce-qu-un-sso.html"
+  },
+
+  "objectives": [
+    "Développer une application PHP",
+    "Rendre cette application responsive et ergonomique"
+  ],
+
+  "context": {
+    "brief": "Ce prototype a été réalisée dans le cadre d'un travail qui m'a été assigné en tant que développeur pour l'association de fait nommée Unosial.",
+    "startDate": "avril 2021",
+    "endDate": "été-automne 2021",
+    "object": "Prototype d'application SSO pour progression future du projet"
+  },
+
+  "critical": {
+    "expectation": "Application SSO fonctionnelle permettant aux membres de se connecter pour accéder aux différents services internes",
+    "constraints": "Sécurité infaillible; robustesse, rapidité et disponibilité conformes aux attentes. Framework CSS et design imposés",
+    "results": ""
+  },
+
+  "realisation": "J'organise et code le projet seul, et communique avec mes collègues développeurs et les administrateurs de l'association lorsque j'ai des questions ou besoin de précisions. Je suis chargé de la réalisation, du test et de la documentation de ce projet, tant pour les membres que pour les développeurs, sur laquelle ces derniers s'appuieront pour faire la refonte des systèmes informatiques de l'association, prévue fin 2021.",
+
+  "skills": {
+    "IT": [
+      "Concevoir une architecture robuste",
+      "Développer un site web en PHP",
+      "Évaluer les risques d'une approche",
+      "Comparer les approches à un problème",
+      "Tester un site web",
+      "Proposer des changements"
+    ],
+    "interdisciplinary": [
+      "Exprimer les besoins programmationnels aux clients",
+      "Généraliser des concepts",
+      "Interpréter les retours utilisateurs",
+      "Identifier les besoins client",
+      "Analyser le contexte de l'application",
+      "Soutenir un projet devant des clients"
+    ]
+  }
+}

@@ -1,16 +1,11 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+function asyncRoute(path) {
+  return () => import(`@/${path}`);
+}
+
 import Home from "@/views/Home.vue";
 import NotFound from "@/views/NotFound.vue";
-import Video from "@/views/Video";
-
-import CV from "@/views/CV.vue";
-import Experiences from "@/components/cv/Experiences";
-import Informations from "@/components/cv/Informations";
-import Skills from "@/components/cv/Skills";
-import Projects from "@/components/cv/Projects";
-import ProjectDetails from "@/components/projects/ProjectDetails";
-import Formations from "@/components/cv/Formations";
 
 const routes = [
   {
@@ -22,47 +17,47 @@ const routes = [
   {
     path: "/video",
     name: "Video",
-    component: Video,
+    component: asyncRoute("views/Video"),
   },
   {
     // CV page
     path: "/cv",
     name: "CV",
-    component: CV,
+    component: asyncRoute("views/CV"),
     children: [
       {
         // "main" page of the CV
         // render the default component
         name: "Présentation",
         path: "",
-        component: Informations,
+        component: asyncRoute("components/cv/Informations"),
       },
       {
         name: "Expériences",
         path: "experiences",
-        component: Experiences,
+        component: asyncRoute("components/cv/Experiences"),
       },
       {
         name: "Compétences",
         path: "skills",
-        component: Skills,
+        component: asyncRoute("components/cv/Skills"),
       },
       {
         name: "Projets",
         path: "projects",
-        component: Projects,
+        component: asyncRoute("components/cv/Projects"),
       },
       {
         name: "Formation",
         path: "formations",
-        component: Formations,
+        component: asyncRoute("components/cv/Formations"),
       },
     ],
   },
   {
     name: "ProjectDetails",
     path: "/project/:slug",
-    component: ProjectDetails,
+    component: asyncRoute("components/projects/ProjectDetails"),
   },
   {
     path: "/:pathMatch(.*)*",

@@ -25,6 +25,7 @@
 import {
   FILTER_DESC_THEN_ALPHABETICAL,
   json_fetch_return,
+  set_title,
 } from "@/assets/utils";
 
 export default {
@@ -33,6 +34,7 @@ export default {
     items: null,
   }),
   async created() {
+    set_title("Projets");
     this.items = await json_fetch_return(
       "/json/projects.json",
       ["projects"],

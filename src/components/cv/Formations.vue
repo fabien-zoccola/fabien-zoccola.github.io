@@ -56,6 +56,7 @@
 import {
   json_fetch_return,
   FILTER_DESC_THEN_ALPHABETICAL,
+  set_title,
 } from "@/assets/utils";
 
 export default {
@@ -64,6 +65,7 @@ export default {
     items: null,
   }),
   async created() {
+    set_title("Formation");
     this.items = await json_fetch_return(
       "/json/formations.json",
       null,

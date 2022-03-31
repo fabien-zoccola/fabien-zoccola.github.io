@@ -35,9 +35,14 @@
 
 <script>
 import Navbar from "@/components/elements/Navbar";
+import { set_title } from "@/assets/utils";
+
 export default {
   name: "Video",
   components: { Navbar },
+  created() {
+    set_title("Vidéo Hackathon");
+  },
 };
 </script>
 

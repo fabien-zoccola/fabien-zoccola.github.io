@@ -39,6 +39,7 @@
 import {
   json_fetch_return,
   FILTER_DESC_THEN_ALPHABETICAL,
+  set_title,
 } from "@/assets/utils";
 
 export default {
@@ -48,6 +49,7 @@ export default {
     maxStars: 5,
   }),
   async created() {
+    set_title("Compétences");
     this.items = await json_fetch_return(
       "/json/skills.json",
       null,

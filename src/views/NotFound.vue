@@ -12,9 +12,13 @@
 
 <script>
 import Navbar from "@/components/elements/Navbar";
+import { set_title } from "@/assets/utils";
 export default {
   name: "NotFound",
   components: { Navbar },
+  created() {
+    set_title("Page non trouvée");
+  },
 };
 </script>
 

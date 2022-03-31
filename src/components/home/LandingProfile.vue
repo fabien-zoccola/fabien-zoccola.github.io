@@ -12,6 +12,9 @@
         </nu-h1>
 
         <nu-block align="right" font="Montserrat">
+          Développeur Web Full-stack
+        </nu-block>
+        <nu-block align="right" font="Montserrat">
           Passionné d'informatique
         </nu-block>
       </nu-flow>

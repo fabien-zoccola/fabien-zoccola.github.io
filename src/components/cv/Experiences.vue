@@ -62,6 +62,7 @@ import {
   get_experiences_categories,
   json_fetch_return,
   FILTER_DESC,
+  set_title,
 } from "@/assets/utils";
 
 export default {
@@ -103,6 +104,7 @@ export default {
     },
   },
   async created() {
+    set_title("Expériences");
     this.items = await json_fetch_return(
       "/json/experiences.json",
       null,

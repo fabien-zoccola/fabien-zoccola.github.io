@@ -85,3 +85,11 @@ export function FILTER_ALPHABETICAL_ORDER(a, b, criterium) {
   if (a[criterium] === a[criterium]) return 0;
   else return a[criterium] > b[criterium] ? 1 : -1;
 }
+
+export function set_title(page_title) {
+  if (page_title == null) {
+    document.title = `Fabien Zoccola`;
+    return;
+  }
+  document.title = `Fabien Zoccola | ${page_title}`;
+}

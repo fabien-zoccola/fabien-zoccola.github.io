@@ -217,10 +217,14 @@
 
 <script>
 import Navbar from "@/components/elements/Navbar";
+import { set_title } from "@/assets/utils";
 
 export default {
   name: "Presentation",
   components: { Navbar },
+  created() {
+    set_title("Présentation");
+  },
 };
 </script>
 

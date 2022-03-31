@@ -26,13 +26,6 @@ const routes = [
     component: asyncRoute("views/CV"),
     children: [
       {
-        // "main" page of the CV
-        // render the default component
-        name: "Présentation",
-        path: "",
-        component: asyncRoute("components/cv/Informations"),
-      },
-      {
         name: "Expériences",
         path: "experiences",
         component: asyncRoute("components/cv/Experiences"),
@@ -41,6 +34,7 @@ const routes = [
         name: "Compétences",
         path: "skills",
         component: asyncRoute("components/cv/Skills"),
+        alias: "",
       },
       {
         name: "Projets",

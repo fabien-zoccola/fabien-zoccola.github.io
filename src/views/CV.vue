@@ -10,11 +10,12 @@
     <nu-block>
       <nu-attrs for="link" padding="5px" text="n underline"></nu-attrs>
       <nu-link to="/#/">Retour à l'accueil</nu-link>
-      <nu-link to="/#/cv/" :class="is('')">Présentation</nu-link>
       <nu-link to="/#/cv/experiences" :class="is('experiences')">
         Expériences
       </nu-link>
-      <nu-link to="/#/cv/skills" :class="is('skills')">Compétences</nu-link>
+      <nu-link to="/#/cv/skills" :class="is('skills') || is('')">
+        Compétences
+      </nu-link>
       <nu-link to="/#/cv/projects" :class="is('projects')">Projets</nu-link>
       <nu-link to="/#/cv/formations" :class="is('formations')">
         Formation
